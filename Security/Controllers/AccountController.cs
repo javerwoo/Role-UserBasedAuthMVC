@@ -23,6 +23,7 @@ namespace Security.Controllers
         }
         //Guid.
         [HttpPost]
+        // It's better to add [ValidateAntiForgeryToken] here.
         public ActionResult Index(LoginViewModel model, string returnUrl = "")
         {
             if (ModelState.IsValid)
